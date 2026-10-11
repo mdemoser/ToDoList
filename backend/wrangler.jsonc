@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "todo-list-api",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-11",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "to-do-list-db",
+      "database_id": "74e3083e-fc5d-4b82-ba86-92eee077cf65"
+    }
+  ]
+}

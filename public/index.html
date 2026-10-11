@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>Minhas Tarefas</h1>
+
+        <!-- Formulário para iniciar o cadastro da tarefa -->
+        <form id="form-tarefa">
+            <input type="text" id="input-tarefa" placeholder="O que você precisa fazer?" required>
+            <button type="submit"><strong>Adicionar</strong></button>
+        </form>
+
+        <!-- Lista de tarefas -->
+        <ul id="lista-tarefas"></ul>
+
+        <!-- Formulário de edição/detalhes -->
+        <form id="form-edicao" class="hidden">
+            <h2 id="titulo-edicao"></h2>
+
+            <label for="descricao">Descrição</label>
+            <textarea id="descricao" name="descricao" rows="5"></textarea>
+
+            <label for="data-inicio">Data de início</label>
+            <input type="date" id="data-inicio" name="data-inicio">
+
+            <label class="check">
+                <input type="checkbox" id="usar-hoje"> Usar data de hoje
+            </label>
+
+            <label for="dias">Dias corridos</label>
+            <input type="number" id="dias" min="1" value="1">
+
+            <p>Término: <strong id="data-termino">---</strong></p>
+
+            <div class="botoes-form">
+                <button type="button" id="btn-cancelar">Cancelar</button>
+                <button type="button" id="btn-salvar">Salvar</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,184 @@
+:root {
+    --fundo: #e4efdd;
+    --card: #f4b26a;
+    --card-borda: #d98c3f;
+    --texto: #3b2a1a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 2rem 1rem;
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'MedievalSharp', cursive;
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* --- Formulário de nova tarefa --- */
+#form-tarefa {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#input-tarefa {
+    flex: 1;
+    padding: 0.75rem;
+    border: 2px solid var(--card-borda);
+    border-radius: 8px;
+    background: #fffaf3;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+#form-tarefa button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--card);
+    color: var(--texto);
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#form-tarefa button:hover {
+    filter: brightness(0.92);
+}
+
+/* --- Lista --- */
+#lista-tarefas {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#lista-tarefas li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--card-borda);
+    border-radius: 8px;
+    background-color: var(--card);
+}
+
+.tarefas-datas {
+    margin: 0.25rem 0 0;
+    font-size: 0.85rem;
+}
+
+/* --- Botões de ação --- */
+.botoes-acao {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-editar,
+.btn-deletar {
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-editar {
+    background-color: #236e1b;
+    padding: 0.5rem 0.8rem;
+}
+
+.btn-editar:hover {
+    background-color: #1f8362;
+}
+
+.btn-deletar {
+    background-color: #d9534f;
+    padding: 0.5rem 1rem;
+}
+
+.btn-deletar:hover {
+    background-color: #c9302c;
+}
+
+.btn-editar:active,
+.btn-deletar:active {
+    transform: scale(0.96);
+}
+
+/* --- Formulário de edição --- */
+#form-edicao {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: 2px solid var(--card-borda);
+    border-radius: 8px;
+    background-color: #fffaf3;
+}
+
+#form-edicao h2 {
+    margin: 0 0 0.5rem;
+}
+
+#form-edicao textarea,
+#form-edicao input[type="date"],
+#form-edicao input[type="number"] {
+    padding: 0.5rem;
+    border: 2px solid var(--card-borda);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.botoes-form {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.botoes-form button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--card);
+    color: var(--texto);
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.botoes-form button:hover {
+    filter: brightness(0.92);
+}
